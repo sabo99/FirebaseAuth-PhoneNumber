@@ -18,6 +18,33 @@ Authentication Android application using <a href="https://firebase.google.com/">
 
 <br>
 
+## Design UI App Firebase Authentication with Phone Number
+
+### **`Preview Firebase Auth with Phone Number`**
+
+<img src="Screenshot_App/Screenshot 2021-12-16 213623.png" height="500"/>
+
+### **`Preview UI FirebaseAuth-PhoneNumber`**
+| Name Page    | Preview UI            |  
+| :----------: | :--------------------: | 
+| `OTP Send`         | <img src="Screenshot_App/1639664111362.jpg" height="500"/> | 
+| `OTP Send with Phone Number`         | <img src="Screenshot_App/1639664111368.jpg" height="500"/> | 
+| `Country Code Picker`  | <img src="Screenshot_App/1639664111355.jpg" height="500"/> | 
+| `OTP Verify`  | <img src="Screenshot_App/1639664111347.jpg" height="500"/> | 
+| `OTP Verify - Resend SmsCode`  | <img src="Screenshot_App/1639664111341.jpg" height="500"/> | 
+| `Home`  | <img src="Screenshot_App/1639664111376.jpg" height="500"/> | 
+
+<br>
+
+## Result on Firebase Console
+
+### **`Authentication`**
+<img src="Screenshot_App/Screenshot 2021-12-16 212044.png"/>
+
+
+
+<br>
+
 ## Dependencies used
 
 ```groovy
@@ -89,29 +116,3 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 **binding** in kotlin can be used directly without initializing **findViewById** on widgets in layout xml
-
-<br>
-
-## Design UI App Firebase Authentication with Phone Number
-
-### **`Preview Firebase Auth with Phone Number`**
-
-<img src="Screenshot_App/Screenshot 2021-12-16 213623.png" height="500"/>
-
-### **`Preview UI FirebaseAuth-PhoneNumber`**
-| Name Page    | Preview UI            |  
-| :----------: | :--------------------: | 
-| `OTP Send`         | <img src="Screenshot_App/1639664111362.jpg" height="500"/> | 
-| `OTP Send with Phone Number`         | <img src="Screenshot_App/1639664111368.jpg" height="500"/> | 
-| `Country Code Picker`  | <img src="Screenshot_App/1639664111355.jpg" height="500"/> | 
-| `OTP Verify`  | <img src="Screenshot_App/1639664111347.jpg" height="500"/> | 
-| `OTP Verify - Resend SmsCode`  | <img src="Screenshot_App/1639664111341.jpg" height="500"/> | 
-| `Home`  | <img src="Screenshot_App/1639664111376.jpg" height="500"/> | 
-
-<br>
-
-## Result on Firebase Console
-
-### **`Authentication`**
-<img src="Screenshot_App/Screenshot 2021-12-16 212044.png"/>
-
