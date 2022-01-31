@@ -31,7 +31,7 @@ class OtpSendActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        if (mAuth.currentUser != null){
+        if (mAuth.currentUser != null) {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
@@ -47,16 +47,22 @@ class OtpSendActivity : AppCompatActivity() {
 
         binding.btnSend.setOnClickListener {
             val number = binding.etPhone.text.toString().trim()
-            val phoneNumber = if (number.substring(0, 1) == "0") number.substring(1) else number
             val countryCode = binding.ccp.selectedCountryCodeWithPlus
+            val phoneNumber = getPhoneNumber(number);
 
-            if (phoneNumber.isEmpty())
-                Callback(this).onToast("Phone number is required!")
-            else if (!Patterns.PHONE.matcher(phoneNumber).matches() || phoneNumber.length < 11)
-                Callback(this).onToast("Need valid phone number!")
-            else
-                otpSend("$countryCode$phoneNumber")
+            otpSend("$countryCode$phoneNumber")
         }
+    }
+
+    private fun getPhoneNumber(phone: String): String? {
+        if (phone.isEmpty())
+            Callback(this).onToast("Phone number is required!")
+        else if (!Patterns.PHONE.matcher(phone).matches() || phone.length < 11)
+            Callback(this).onToast("Need valid phone number!")
+        else
+            return if (phone.substring(0, 1) == "0") phone.substring(1) else phone
+
+        return null;
     }
 
     private fun otpSend(phoneNumberWithCountryCode: String) {
